@@ -17,15 +17,16 @@
 
 
 function setup(){
-createCanvas(windowWidth,windowHeight);
-background(0)
+createCanvas(600,600);
+background(255);
 
 }
 
 function draw(){
-  ellispe(mouseX,mouseY,size);
+ellipse(56, 46, 55, 55);
 
 }
+
 
 
 
