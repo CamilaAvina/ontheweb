@@ -1,31 +1,45 @@
-// function setup() {
-//   createCanvas(windowWidth, windowHeight);
-//    background(0);
-// }
-//
-// function draw() {
-//
-// }
+let button;
+let cnv;
+let yourInputs = [];
+let slider;
+function setup() {
+  cnv = createCanvas(500, 500);
+  cnv.parent("#canvasDiv");
+   background(255);
+
+   button = select('#Button');
+   button.mousePressed(buttonPressed);
+   button.class("Btn");
+   slider = createSlider(20,200,86);
 
 
-
-
-
-
-
-
-
-
-function setup(){
-createCanvas(600,600);
-background(255);
+for(let i = 0; i <5; i++) {
+   yourInputs.push( createInput());
+   yourInputs[yourInputs.length-1].parent("inputFields");
+   //yourInputs.position(100,100);
+}
 
 }
 
-function draw(){
-ellipse(56, 46, 55, 55);
+function buttonPressed(){
+  //if (buttonPressed){
 
 }
+
+
+
+function draw() {
+
+
+
+
+
+}
+
+
+
+
+
 
 
 
