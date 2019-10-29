@@ -1,40 +1,50 @@
 let button;
 let cnv;
 let yourInputs = [];
-let slider;
+let submit = [];
+let count = 11;
+
 function setup() {
   cnv = createCanvas(500, 500);
   cnv.parent("#canvasDiv");
-   background(255);
+   //background(255);
 
    button = select('#Button');
    button.mousePressed(buttonPressed);
    button.class("Btn");
-   slider = createSlider(20,200,86);
+
 
 
 for(let i = 0; i <5; i++) {
+
    yourInputs.push( createInput());
    yourInputs[yourInputs.length-1].parent("inputFields");
    //yourInputs.position(100,100);
 }
 
 }
-
-function buttonPressed(){
-  //if (buttonPressed){
-
-}
-
-
-
 function draw() {
-
+  noStroke();
+//  fill('pink');
+  rect(225, 130, 250, 150);
+  textSize(100);
+   text(count,width/2, height/2);
 
 
 
 
 }
+function buttonPressed(){
+for (let i = 0; i < yourInputs.length; i++) {
+  submit.push(yourInputs[i].value());
+
+}
+count= count+11;
+}
+
+
+
+
 
 
 
